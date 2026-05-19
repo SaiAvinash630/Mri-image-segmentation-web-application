@@ -22,8 +22,8 @@ Thumbs.db
 *.sqlite3
 
 # Model and large binary files
-modules_service/model_epoch213_trainDice0.9208.keras
-*.keras
+# modules_service/model_epoch213_trainDice0.9208.keras
+# *.keras
 
 # Streamlit
 .cache/
