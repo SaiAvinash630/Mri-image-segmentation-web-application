@@ -1,0 +1,26 @@
+version: '3.9'
+
+services:
+  api:
+    build:
+      context: ./modules_service
+      dockerfile: Dockerfile
+    container_name: mri-image-segmentation-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./modules_service/model_epoch213_trainDice0.9208.keras:/app/model_epoch213_trainDice0.9208.keras:ro
+    restart: unless-stopped
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mri-image-segmentation-app
+    ports:
+      - "8501:8501"
+    environment:
+      - FASTAPI_URL=http://api:8000
+    depends_on:
+      - api
+    restart: unless-stopped
