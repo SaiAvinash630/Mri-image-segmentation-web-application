@@ -1,0 +1,36 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.env/
+.env
+env/
+ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# Model and large binary files
+modules_service/model_epoch213_trainDice0.9208.keras
+*.keras
+
+# Streamlit
+.cache/
+
+# Docker build files
+**/docker/
+
+# Editor files
+.vscode/
+.idea/
